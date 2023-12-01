@@ -142,7 +142,7 @@ object ATCCatalogsImpl
                   (
                    acc,
                    currentGroup.map(
-                     grp => grp.copy(children = grp.children.map(_ :+ Code[ATC](code)))
+                     grp => grp.copy(children = grp.children.map(_ + Code[ATC](code)))
                    ),
                    substances +
                      Concept[ATC](
@@ -168,7 +168,7 @@ object ATCCatalogsImpl
                        Some(version),
                        Map(ATC.Kind.name -> Set(Kinds.Group.toString)) ++ ddd.map(v => ATC.DDD.name -> Set(v)),
                        None,
-                       Some(List.empty)
+                       Some(Set.empty)
                      )
                     ),
                     Set.empty
