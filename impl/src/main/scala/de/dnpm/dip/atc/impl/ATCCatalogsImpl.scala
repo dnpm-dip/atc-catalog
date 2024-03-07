@@ -236,6 +236,11 @@ object ATCCatalogsImpl
         catalogs.keys.max(versionOrdering)
       )
 
+    override def filters(
+      implicit F: Applicative[F]
+    ): F[List[CodeSystem.Filter[ATC]]] =
+      F.pure(ATC.filters)
+
     override def get(
       version: String
     )(
