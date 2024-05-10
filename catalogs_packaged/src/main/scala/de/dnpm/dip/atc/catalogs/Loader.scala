@@ -19,7 +19,7 @@ class ClassPathLoader extends ATCCatalogsImpl.Loader
 
   private val versions =
     NonEmptyList.fromListUnsafe(
-      (2020 to 2023).map(_.toString).toList
+      (2020 to 2024).map(_.toString).toList
     )
 
   override def inputStreams: NonEmptyList[(String,InputStream)] = 

@@ -44,9 +44,7 @@ class Tests extends AnyFlatSpec
 
   it must "contain children for 'Proteinkinase-Inhibitoren'" in {
 
-
     val atc = catalogs.latest
-
 
     atc.concepts
       .find(_.display contains "Proteinkinase-Inhibitoren")
