@@ -1,14 +1,12 @@
 package de.dnpm.dip.atc.impl
 
 
-import java.time.Year
 import java.io.{
   InputStream,
   File,
   FileInputStream
 }
 import scala.util.Try
-import scala.util.matching.Regex
 import cats.Applicative
 import cats.data.NonEmptyList
 import scala.collection.concurrent.{
@@ -107,7 +105,6 @@ object ATCCatalogsImpl
   object TsvParser
   {
     import scala.io.Source
-    import scala.util.matching.Regex
     import CodeSystem.Concept
 
     private val separator = "\t"
