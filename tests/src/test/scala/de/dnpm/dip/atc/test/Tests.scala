@@ -2,8 +2,6 @@ package de.dnpm.dip.atc.impl
 
 
 import scala.util.Success
-import scala.util.matching.Regex
-import scala.io.Source
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.must.Matchers._
 import org.scalatest.OptionValues._
@@ -18,10 +16,11 @@ import de.dnpm.dip.coding.atc.ATC
 class Tests extends AnyFlatSpec
 {
 
-  private val group = "([A-Z]{1}[0-9]{2}[A-Z]{2})".r
+//  private val group = "([A-Z]{1}[0-9]{2}[A-Z]{2})".r
 
 
   val cspTry = CodeSystemProvider.getInstance[Id]
+
 
   "CodeSystemProvider[Any,...]" must "have been successfully loaded" in {
     cspTry must be (a [Success[_]])
