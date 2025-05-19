@@ -16,9 +16,6 @@ import de.dnpm.dip.coding.atc.ATC
 class Tests extends AnyFlatSpec
 {
 
-//  private val group = "([A-Z]{1}[0-9]{2}[A-Z]{2})".r
-
-
   val cspTry = CodeSystemProvider.getInstance[Id]
 
 
