@@ -1,13 +1,17 @@
-
 /*
  build.sbt adapted from https://github.com/pbassiner/sbt-multi-project-example/blob/master/build.sbt
 */
+
+import scala.util.Properties.envOrElse
 
 
 name := "atc"
 ThisBuild / organization := "de.dnpm.dip"
 ThisBuild / scalaVersion := "2.13.16"
-ThisBuild / version      := "1.0-SNAPSHOT"
+ThisBuild / version      := envOrElse("VERSION","1.0.0")
+
+githubOwner       := envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")(0)
+githubRepository  := envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")(1)
 
 
 //-----------------------------------------------------------------------------
@@ -42,7 +46,6 @@ lazy val catalogs_packaged = project
   .settings(
     name := "atc-catalogs-packaged",
     settings,
-    libraryDependencies ++= Seq()
   )
   .dependsOn(impl)
 
@@ -69,8 +72,8 @@ lazy val tests = project
 
 lazy val dependencies =
   new {
-    val scalatest  = "org.scalatest"  %% "scalatest"  % "3.2.18" % Test
-    val core       = "de.dnpm.dip"    %% "core"       % "1.0-SNAPSHOT"
+    val scalatest = "org.scalatest"  %% "scalatest" % "3.2.18" % Test
+    val core      = "de.dnpm.dip"    %% "core"      % "1.0.0"
   }
 
 
@@ -91,7 +94,7 @@ lazy val compilerOptions = Seq(
   "-language:experimental.macros",
   "-language:higherKinds",
   "-language:implicitConversions",
-  "-Ymacro-annotations",
+//  "-Ymacro-annotations",
 
   // Warnings as errors!
   "-Xfatal-warnings",
@@ -123,7 +126,6 @@ lazy val compilerOptions = Seq(
   "-Wunused:privates",
   "-Wunused:implicits",
   "-Wvalue-discard",
-
   // Deactivated to avoid many false positives from 'evidence' parameters in context bounds
 //  "-Wunused:params",
 )
@@ -131,9 +133,10 @@ lazy val compilerOptions = Seq(
 
 lazy val commonSettings = Seq(
   scalacOptions ++= compilerOptions,
-  resolvers ++=
-    Seq("Local Maven Repository" at "file://" + Path.userHome.absolutePath + "/.m2/repository") ++
-    Resolver.sonatypeOssRepos("releases") ++
-    Resolver.sonatypeOssRepos("snapshots")
+  resolvers ++= Seq(
+    "Local Maven Repository" at "file://" + Path.userHome.absolutePath + "/.m2/repository",
+    Resolver.githubPackages("dnpm-dip"),
+    Resolver.sonatypeCentralSnapshots
+  )
 )
 
