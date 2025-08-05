@@ -10,8 +10,9 @@ ThisBuild / organization := "de.dnpm.dip"
 ThisBuild / scalaVersion := "2.13.16"
 ThisBuild / version      := envOrElse("VERSION","1.0.0")
 
-githubOwner       := envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")(0)
-githubRepository  := envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")(1)
+val ownerRepo  = envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")
+ThisBuild / githubOwner      := ownerRepo(0)
+ThisBuild / githubRepository := ownerRepo(1)
 
 
 //-----------------------------------------------------------------------------
@@ -48,7 +49,6 @@ lazy val catalogs_packaged = project
     settings,
   )
   .dependsOn(impl)
-
 
 
 lazy val tests = project
