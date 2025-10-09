@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/dnpm-dip/atc-catalog/compare/v1.0.0...v1.1.0) (2025-10-09)
+
+
+### Features
+
+* Upgraded dependency version: core ([2ee03e5](https://github.com/dnpm-dip/atc-catalog/commit/2ee03e5e636fc0f8b6e2f9b686f4cfc1a0f6f950))
+
 ## 1.0.0 (2025-08-05)
 
 
