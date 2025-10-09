@@ -1,6 +1,4 @@
-/*
- build.sbt adapted from https://github.com/pbassiner/sbt-multi-project-example/blob/master/build.sbt
-*/
+// build.sbt adapted from https://github.com/pbassiner/sbt-multi-project-example/blob/master/build.sbt
 
 import scala.util.Properties.envOrElse
 
@@ -8,7 +6,7 @@ import scala.util.Properties.envOrElse
 name := "atc"
 ThisBuild / organization := "de.dnpm.dip"
 ThisBuild / scalaVersion := "2.13.16"
-ThisBuild / version      := envOrElse("VERSION","1.0.0")
+ThisBuild / version      := envOrElse("VERSION","1.1.0")
 
 val ownerRepo  = envOrElse("REPOSITORY","dnpm-dip/atc-catalog").split("/")
 ThisBuild / githubOwner      := ownerRepo(0)
@@ -73,7 +71,7 @@ lazy val tests = project
 lazy val dependencies =
   new {
     val scalatest = "org.scalatest"  %% "scalatest" % "3.2.18" % Test
-    val core      = "de.dnpm.dip"    %% "core"      % "1.0.0"
+    val core      = "de.dnpm.dip"    %% "core"      % "1.1.1"
   }
 
 
@@ -126,10 +124,7 @@ lazy val compilerOptions = Seq(
   "-Wunused:privates",
   "-Wunused:implicits",
   "-Wvalue-discard",
-  // Deactivated to avoid many false positives from 'evidence' parameters in context bounds
-//  "-Wunused:params",
 )
-
 
 lazy val commonSettings = Seq(
   scalacOptions ++= compilerOptions,
@@ -139,4 +134,3 @@ lazy val commonSettings = Seq(
     Resolver.sonatypeCentralSnapshots
   )
 )
-
