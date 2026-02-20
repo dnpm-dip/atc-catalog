@@ -1,11 +1,7 @@
 package de.dnpm.dip.atc.impl
 
 
-import java.io.{
-  InputStream,
-  File,
-  FileInputStream
-}
+import java.io.InputStream
 import scala.util.Try
 import cats.{
   Applicative,
@@ -17,7 +13,6 @@ import scala.collection.concurrent.{
   TrieMap
 }
 import de.dnpm.dip.util.{
-  Logging,
   SPI,
   SPILoader
 }
@@ -61,22 +56,22 @@ object ATCCatalogsImpl
   //---------------------------------------------------------------------------
   trait Loader
   {
-    def inputStreams: NonEmptyList[(String,InputStream)]
+    def catalogs: NonEmptyList[(String,Eval[CodeSystem[ATC]])]
   }
 
   trait LoaderSPI extends SPI[Loader]
 
   private object Loader extends SPILoader[LoaderSPI]
 
-
+/*
   private class DefaultLoader extends Loader with Logging
   {
     val sysProp = "dnpm.dip.catalogs.dir"
 
     val fileName = """ATC_(\d{4})\.csv""".r
        
-    override def inputStreams: NonEmptyList[(String,InputStream)] = {
-
+    override def inputStreams: NonEmptyList[(String,Eval[InputStream])] = {
+      ???
       Option(System.getProperty(sysProp)).map(new File(_)) match {
 
         case None => {
@@ -92,18 +87,17 @@ object ATCCatalogsImpl
               .toList
               .map(f =>
                 f.getName match {
-                  case fileName(year) => (year, new FileInputStream(f)) 
+                  case fileName(year) => (year, Eval.later(new FileInputStream(f))) 
                 } 
               )
           )
 
       }
-
     }
   }
+*/
   //---------------------------------------------------------------------------
   //---------------------------------------------------------------------------
-
 
   object TsvParser
   {
@@ -195,17 +189,13 @@ object ATCCatalogsImpl
   }
 
   private val loader =
-    Loader.getInstance.getOrElse(new DefaultLoader)
+    Loader.getInstance.get//OrElse(new DefaultLoader)
 
 
 
   private val catalogs: Map[String,Eval[CodeSystem[ATC]]] =
     TrieMap.from( 
-      loader.inputStreams
-        .toList
-        .map {
-          case (version,in) => version -> Eval.later { TsvParser.parse(version,in) }
-        }
+      loader.catalogs.toList
     )
 
 
