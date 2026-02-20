@@ -7,7 +7,10 @@ import java.io.{
   FileInputStream
 }
 import scala.util.Try
-import cats.Applicative
+import cats.{
+  Applicative,
+  Eval
+}
 import cats.data.NonEmptyList
 import scala.collection.concurrent.{
   Map,
@@ -196,13 +199,12 @@ object ATCCatalogsImpl
 
 
 
-  private val catalogs: Map[String,CodeSystem[ATC]] =
+  private val catalogs: Map[String,Eval[CodeSystem[ATC]]] =
     TrieMap.from( 
       loader.inputStreams
         .toList
         .map {
-          case (version,in) =>
-            version -> TsvParser.parse(version,in)
+          case (version,in) => version -> Eval.later { TsvParser.parse(version,in) }
         }
     )
 
@@ -244,13 +246,13 @@ object ATCCatalogsImpl
       implicit F: Applicative[F]
     ): F[Option[CodeSystem[ATC]]] =
       F.pure(
-        catalogs.get(version) 
+        catalogs.get(version).map(_.value) 
       )
 
     override def latest(
       implicit F: Applicative[F]
     ): F[CodeSystem[ATC]] =
-      latestVersion.map(catalogs(_))
+      latestVersion.map(catalogs(_).value)
 
   }
 
