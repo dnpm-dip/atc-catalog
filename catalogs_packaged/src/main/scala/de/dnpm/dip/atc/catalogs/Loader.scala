@@ -3,6 +3,8 @@ package de.dnpm.dip.atc.catalogs
 
 import cats.Eval
 import cats.data.NonEmptyList
+import de.dnpm.dip.coding.CodeSystem
+import de.dnpm.dip.coding.atc.ATC
 import de.dnpm.dip.atc.impl.ATCCatalogsImpl
 
 
@@ -22,18 +24,13 @@ class ClassPathLoader extends ATCCatalogsImpl.Loader
       (2020 to 2025).map(_.toString).toList
     )
 
-/*
-  override def inputStreams: NonEmptyList[(String,Eval[InputStream])] = 
-    versions.map( v =>
-      v -> Eval.later(this.getClass.getClassLoader.getResourceAsStream(s"ATC_$v.csv"))
-    )
-*/ 
-
-  override def catalogs = //: NonEmptyList[(String,Eval[CodeSystem[ATC]])] = 
+  override def catalogs: NonEmptyList[(String,Eval[CodeSystem[ATC]])] =
     versions.map(
-      v => v -> Eval.later(
-        ATCCatalogsImpl.TsvParser.parse(v,this.getClass.getClassLoader.getResourceAsStream(s"ATC_$v.csv"))
-      )
+      version => version -> Eval.later {
+        val stream = this.getClass.getClassLoader.getResourceAsStream(s"ATC_$version.csv")
+        require(stream != null, s"Classpath resource ATC_$version.csv not found")
+        ATCCatalogsImpl.TsvParser.parse(version, stream)
+      }
     )
   
 }
