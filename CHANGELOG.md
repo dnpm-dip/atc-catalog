@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/dnpm-dip/atc-catalog/compare/v1.1.0...v1.1.1) (2026-02-20)
+
+
+### Bug Fixes
+
+* bump core to 1.2.1 ([#5](https://github.com/dnpm-dip/atc-catalog/issues/5)); Refactored ATC catalog Loader to avoid problem of eagerly opened InputStream ([7bcfa3d](https://github.com/dnpm-dip/atc-catalog/commit/7bcfa3d1c540262c3cbe799609eb95606233e084))
+
 ## [1.1.0](https://github.com/dnpm-dip/atc-catalog/compare/v1.0.0...v1.1.0) (2025-10-09)
 
 
