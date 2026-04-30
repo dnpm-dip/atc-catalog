@@ -63,39 +63,6 @@ object ATCCatalogsImpl
 
   private object Loader extends SPILoader[LoaderSPI]
 
-/*
-  private class DefaultLoader extends Loader with Logging
-  {
-    val sysProp = "dnpm.dip.catalogs.dir"
-
-    val fileName = """ATC_(\d{4})\.csv""".r
-       
-    override def inputStreams: NonEmptyList[(String,Eval[InputStream])] = {
-      ???
-      Option(System.getProperty(sysProp)).map(new File(_)) match {
-
-        case None => {
-          val msg = s"Please define the directory from which to load ATC catalogs using System Property $sysProp"
-          log.error(msg)
-
-          throw new NoSuchElementException(msg)
-        }
-
-        case Some(dir) =>
-          NonEmptyList.fromListUnsafe(
-            dir.listFiles(f => fileName.matches(f.getName))
-              .toList
-              .map(f =>
-                f.getName match {
-                  case fileName(year) => (year, Eval.later(new FileInputStream(f))) 
-                } 
-              )
-          )
-
-      }
-    }
-  }
-*/
   //---------------------------------------------------------------------------
   //---------------------------------------------------------------------------
 
@@ -189,7 +156,7 @@ object ATCCatalogsImpl
   }
 
   private val loader =
-    Loader.getInstance.get//OrElse(new DefaultLoader)
+    Loader.getInstance.get
 
 
 
