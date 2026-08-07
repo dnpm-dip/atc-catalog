@@ -7347,11 +7347,9 @@ M05BA02		Clodronsäure		1,6 g O; 1,5 g P Dosis pro Behandlungszyklus bezogen auf
 M05BA03		Pamidronsäure		60 mg P Dosis pro Behandlungszyklus bezogen auf das Salz der Pamidronsäure
 M05BA04		Alendronsäure		10 mg O bezogen auf die Säure der Alendronsäure
 M05BA05		Tiludronsäure		0,4 g O bezogen auf die Säure der Tiludronsäure
-M05BA06		Ibandronsäure		5 mg O Osteoporose; 6 mg P Dosis pro Behandlungszyklus bei Tumor-
-induzierter Hyperkalzämie; 50 mg O bei Tumor-induzierter Hyperkalzämie; 
-33 mcg P bei Osteoporose bezogen auf die Säure der Ibandronsäure M05BA07		Risedronsäure		5 mg O Osteoporose; 30 mg O bei Morbus Paget 
-bezogen auf das Salz der Risedronsäure M05BA08		Zoledronsäure		4 mg P Dosis pro Behandlungszyklus bei Tumor-induzierter Hyperkalzämie; 
-14 mcg P Osteoporose bezogen auf die Säure der Zoledronsäure 
+M05BA06		Ibandronsäure		5 mg O Osteoporose; 6 mg P Dosis pro Behandlungszyklus bei Tumor-induzierter Hyperkalzämie; 50 mg O bei Tumor-induzierter Hyperkalzämie; 33 mcg P bei Osteoporose bezogen auf die Säure der Ibandronsäure
+M05BA07		Risedronsäure		5 mg O Osteoporose; 30 mg O bei Morbus Paget bezogen auf das Salz der Risedronsäure
+M05BA08		Zoledronsäure		4 mg P Dosis pro Behandlungszyklus bei Tumor-induzierter Hyperkalzämie; 14 mcg P Osteoporose bezogen auf die Säure der Zoledronsäure
 				
 M05BB  		Bisphosphonate, Kombinationen		
 M05BB01		Etidronsäure und Calcium, Sequenzialpräparate		0,4 g O bezogen auf das Salz der Etidronsäure
