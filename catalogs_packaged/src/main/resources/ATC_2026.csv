@@ -4596,11 +4596,9 @@ G03AA18		Drospirenon und Estetrol		Zykluspackung mit 28 Tabletten 1 DE O
 G03AB  		Gestagene und Estrogene, Sequenzialpräparate		
 G03AB01		Megestrol und Ethinylestradiol		
 G03AB02		Lynestrenol und Ethinylestradiol		Zykluspackung mit 28 Tabletten 1 DE O; Zykluspackung mit 21 Tabletten 0,75 DE O 
-G03AB03		Levonorgestrel und Ethinylestradiol		Zykluspackung mit 91 Tabletten 1 DE O; 
-Zykluspackung mit 28 Tabletten 1 DE O; 
-Zykluspackung mit 21 Tabletten 0,75 DE O G03AB04		Norethisteron und Ethinylestradiol		Zykluspackung mit 28 Tabletten 1 DE O; 
-Zykluspackung mit 21 Tabletten 0,75 DE O G03AB05		Desogestrel und Ethinylestradiol		Zykluspackung mit 28 Tabletten 1 DE O; 
-Zykluspackung mit 21 Tabletten 0,75 DE O 
+G03AB03		Levonorgestrel und Ethinylestradiol		Zykluspackung mit 91 Tabletten 1 DE O; Zykluspackung mit 28 Tabletten 1 DE O; Zykluspackung mit 21 Tabletten 0,75 DE O 
+G03AB04		Norethisteron und Ethinylestradiol		Zykluspackung mit 28 Tabletten 1 DE O; Zykluspackung mit 21 Tabletten 0,75 DE O 
+G03AB05		Desogestrel und Ethinylestradiol		Zykluspackung mit 28 Tabletten 1 DE O; Zykluspackung mit 21 Tabletten 0,75 DE O 
 G03AB06		Gestoden und Ethinylestradiol		
 G03AB07		Chlormadinon und Ethinylestradiol		
 G03AB08		Dienogest und Estradiol		Zykluspackung mit 28 Tabletten 1 DE O 
@@ -4639,11 +4637,7 @@ G03C   		ESTROGENE
 				
 G03CA  		Natürliche und halbsynthetische Estrogene, rein		
 G03CA01		Ethinylestradiol		25 mcg O
-G03CA03		Estradiol		0,3 mg N; 2 mg O; 1 mg P Depot mit kurzer Wirkdauer; 
-0,3 mg P Depot mit langer Wirkdauer; 5 mg R; 1 mg TD Gel; 
-50 mcg TD Pflaster, bezogen auf die Freisetzungsrate pro 24 Stunden; 
-1,53 mg TD Spray; 25 mcg V; 
-7,5 mcg V Vaginalring, bezogen auf die Freisetzungsrate pro 24 Stunden
+G03CA03		Estradiol		0,3 mg N; 2 mg O; 1 mg P Depot mit kurzer Wirkdauer; 0,3 mg P Depot mit langer Wirkdauer; 5 mg R; 1 mg TD Gel; 50 mcg TD Pflaster, bezogen auf die Freisetzungsrate pro 24 Stunden; 1,53 mg TD Spray; 25 mcg V; 7,5 mcg V Vaginalring, bezogen auf die Freisetzungsrate pro 24 Stunden
 G03CA04		Estriol		2 mg O,P; 0,2 mg V
 G03CA06		Chlorotrianisen		24 mg O
 G03CA07		Estron		1 mg O
@@ -5937,9 +5931,7 @@ J07AH07		Meningokokken C, gereinigtes Polysaccharid-Antigen, konjugiert		Standar
 J07AH08		Meningokokken tetravalent (A, C, Y, W-135), gereinigtes Polysaccharid-Antigen, konjugiert		Standarddosis: 1 DE P 
 J07AH09		Meningokokken B, Multikomponenten-Impfstoff		Standarddosis: 1 DE P 
 J07AH10		Meningokokken A, gereinigtes Polysaccharid-Antigen, konjugiert		
-J07AH11		Meningokokken pentavalent (A,B,C,Y,W-135), 
-gereinigtes Polysaccharid-Antigen, 
-konjugiert und Faktor-H-bindendes Protein		
+J07AH11		Meningokokken pentavalent (A,B,C,Y,W-135), gereinigtes Polysaccharid-Antigen, konjugiert und Faktor-H-bindendes Protein		
 				
 J07AJ  		Pertussis-Impfstoffe		
 J07AJ01		Pertussis, inaktiviert, ganze Zelle		
@@ -8616,10 +8608,7 @@ P01BA07		Tafenoquin
 P01BB  		Biguanide		
 P01BB01		Proguanil		0,2 g O Hydrochlorid, (prophylaktische Tagesdosis)
 P01BB02		Cycloguanilembonat		
-P01BB51		Proguanil und Atovaquon		0,4 g Proguanilhydrochlorid und 1 g Atovaquon zur Therapie; 
-0,1 g Proguanilhydrochlorid und 0,25 g Atovaquon zur Prophylaxe; 
-0,05 g Proguanilhydrochlorid und 0,125 g Atovaquon Kinder DDD 
-zur Prophylaxe 
+P01BB51		Proguanil und Atovaquon		0,4 g Proguanilhydrochlorid und 1 g Atovaquon zur Therapie; 0,1 g Proguanilhydrochlorid und 0,25 g Atovaquon zur Prophylaxe; 0,05 g Proguanilhydrochlorid und 0,125 g Atovaquon Kinder DDD zur Prophylaxe 
 P01BB52		Chloroquin und Proguanil		
 				
 P01BC  		Methanolchinoline		
@@ -9099,10 +9088,7 @@ R03AL12		Indacaterol, Glycopyrroniumbromid und Mometason		Standarddosis: 1 DE In
 R03B   		ANDERE INHALATIVE MITTEL BEI OBSTRUKTIVEN ATEMWEGSERKRANKUNGEN		
 				
 R03BA  		Glucocorticoide		
-R03BA01		Beclometason		0,8 mg Inhal.aerosol/pulver bezogen auf das Beclometasondipropionat; 
-1,5 mg Inhal.lösung bezogen auf das Beclometasondipropionat; 
-0,4 mg Inhal.aerosol Partikelgröße < 3,3 mcm 
-bezogen auf das Beclometasondipropionat 
+R03BA01		Beclometason		0,8 mg Inhal.aerosol/pulver bezogen auf das Beclometasondipropionat; 1,5 mg Inhal.lösung bezogen auf das Beclometasondipropionat; 0,4 mg Inhal.aerosol Partikelgröße < 3,3 mcm bezogen auf das Beclometasondipropionat 
 R03BA02		Budesonid		0,8 mg Inhal.aerosol/pulver; 1,5 mg Inhal.lösung
 R03BA03		Flunisolid		1 mg Inhal.aerosol
 R03BA04		Betamethason		
@@ -9117,13 +9103,10 @@ R03BB  		Anticholinergika
 R03BB01		Ipratropiumbromid		0,12 mg Inhal.aerosol/pulver; 0,3 mg Inhal.lösung; 1,5 mg Inhal.lösung; 0,6 mg Inhal.pulver 
 R03BB02		Oxitropiumbromid		0,6 mg Inhal.aerosol; 4 mg Inhal.lösung
 R03BB03		Stechapfel-haltige Zubereitungen		
-R03BB04		Tiotropiumbromid		5 mcg Inhal.lösung bezogen auf Tiotropium 
-(aus dem Mundstück abgegebene Dosis); 
-10 mcg Inhal.pulver bezogen auf Tiotropium 
-(aus dem Mundstück abgegebene Dosis)R03BB05		Aclidiniumbromid		0,644 mg Inhal.pulver bezogen auf Aclidinium 
-(aus dem Mundstück abgegebene Dosis)R03BB06		Glycopyrroniumbromid		44 mcg Inhal.pulver bezogen auf Glycopyrronium 
-(aus dem Mundstück abgegebene Dosis)R03BB07		Umeclidiniumbromid		55 mcg Inhal.pulver bezogen auf Umeclidinium 
-(aus dem Mundstück abgegebene Dosis)
+R03BB04		Tiotropiumbromid		5 mcg Inhal.lösung bezogen auf Tiotropium (aus dem Mundstück abgegebene Dosis); 10 mcg Inhal.pulver bezogen auf Tiotropium (aus dem Mundstück abgegebene Dosis)
+R03BB05		Aclidiniumbromid		0,644 mg Inhal.pulver bezogen auf Aclidinium (aus dem Mundstück abgegebene Dosis)
+R03BB06		Glycopyrroniumbromid		44 mcg Inhal.pulver bezogen auf Glycopyrronium (aus dem Mundstück abgegebene Dosis)
+R03BB07		Umeclidiniumbromid		55 mcg Inhal.pulver bezogen auf Umeclidinium (aus dem Mundstück abgegebene Dosis)
 R03BB08		Revefenacin		
 R03BB54		Tiotropiumbromid, Kombinationen		
 				
@@ -10604,9 +10587,7 @@ V07AG  		Verbandmittel
 				
 V07AI  		Andere Hilfsmittel ohne Pharmazentralnummer/Hilfsmittelnummer		
 V07AI01		Andere Hilfsmittel ohne Pharmazentralnummer/Hilfsmittelnummer		
-V07AI02		Andere Hilfsmittel ohne Pharmazentralnummer/Hilfsmittel-
-nummer, die im Zusammenhang mit einer individuell 
-hergestellten parenteralen Lösung abgegeben werden		
+V07AI02		Andere Hilfsmittel ohne Pharmazentralnummer/Hilfsmittelnummer, die im Zusammenhang mit einer individuell hergestellten parenteralen Lösung abgegeben werden		
 				
 V07AN  		Inkontinenz-Artikel		
 V07AN50		Katheter, Kombinationen		Standarddosis: 1 DE U 
