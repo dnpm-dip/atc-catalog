@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/dnpm-dip/atc-catalog/compare/v1.1.2...v1.1.3) (2026-09-07)
+
+
+### Bug Fixes
+
+* Corrected CSV structure of ATC 2026 for entries which hadn't been correctl formatted by regex-based workaround applied to CSV export from spreadsheet ([#9](https://github.com/dnpm-dip/atc-catalog/issues/9)) ([c83679d](https://github.com/dnpm-dip/atc-catalog/commit/c83679db8fcd220bc6d64ad7cf9f8178c0415ad8))
+* use correct line breaks in ATC code list ([#11](https://github.com/dnpm-dip/atc-catalog/issues/11)) ([93cfbce](https://github.com/dnpm-dip/atc-catalog/commit/93cfbce240d9be5c08ce334754a95a463efe5d28))
+
 ## [1.1.2](https://github.com/dnpm-dip/atc-catalog/compare/v1.1.1...v1.1.2) (2026-07-14)
 
 
