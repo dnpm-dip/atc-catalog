@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/dnpm-dip/atc-catalog/compare/v1.1.3...v1.1.4) (2026-10-21)
+
+
+### Bug Fixes
+
+* bump dependencies ([971c0f4](https://github.com/dnpm-dip/atc-catalog/commit/971c0f42954ea63848dee5e045d7851022850873))
+
 ## [1.1.3](https://github.com/dnpm-dip/atc-catalog/compare/v1.1.2...v1.1.3) (2026-09-07)
 
 
